@@ -1,0 +1,46 @@
+{
+    "name": "Seudev's Video Speed Controller",
+    "version": "1.0.0",
+    "version_name": "1.0.0",
+    "description": "A simple and customizable Google Chrome Extension for control the video speed!",
+    "homepage_url": "https://github.com/seudev/chrome-video-speed-controller",
+    "author": "Thomás Sousa Silva <thomassousa.dev>",
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "img/video-speed-controller-16px.png",
+            "24": "img/video-speed-controller-24px.png",
+            "32": "img/video-speed-controller-32px.png",
+            "48": "img/video-speed-controller-48px.png",
+            "64": "img/video-speed-controller-64px.png",
+            "128": "img/video-speed-controller-128px.png",
+            "256": "img/video-speed-controller-256px.png"
+        }
+    },
+    "web_accessible_resources": [
+        "img/*.png",
+        "css/*.css",
+        "js/*.js"
+    ],
+    "icons": {
+        "16": "img/video-speed-controller-16px.png",
+        "24": "img/video-speed-controller-24px.png",
+        "32": "img/video-speed-controller-32px.png",
+        "48": "img/video-speed-controller-48px.png",
+        "64": "img/video-speed-controller-64px.png",
+        "128": "img/video-speed-controller-128px.png",
+        "256": "img/video-speed-controller-256px.png"
+    },
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage"
+    ],
+    "manifest_version": 2
+}

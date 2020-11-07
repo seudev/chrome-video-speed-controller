@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 250px;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0 5px;
+    font-size: 12px;
+}
+
+footer > .heart {
+    color: #ff0000;
+    font-size: 1.1em;
+}
+
+footer > a,
+footer > a:visited,
+footer > a:hover {
+    text-decoration: none;
+    color: #6a66a7;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.container + .container {
+    padding-top: 5px;
+}
+
+.speed-input-container ~ button {
+    margin-left: 5px;
+}
+
+.speed-input-container>input {
+    width: 60px;
+    height: 35px;
+}
+
+.speed-input-container > label {
+    display: inline-block;
+    font-weight: 900;
+    width: 45px;
+}
+
+#predefined-speed-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#predefined-speed-list > li {
+    margin: 3px;
+}
+
+#predefined-speed-container {
+    justify-content: center;
+}
+
+#custom-predefined-speed-input {
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#reset-all-settings {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 22px;
+}
+
+#reset-all-settings:hover {
+    cursor: pointer;
+}

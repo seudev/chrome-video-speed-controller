@@ -19,15 +19,22 @@ A simple and customizable Google Chrome Extension for control the video speed!
 
 ## Installation
 
-* **Option 1**: Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/).
-* **Option 2**: install it from source:
-    * clone/download this repository;
-    * open Chrome and go to [chrome://chrome/extensions](chrome://chrome/extensions/);
-    * enable the **Developer mode**;
-    * click **Load unpacked extension**;
-    * select the extension folder in this repo.
+### Option 1: Not available yet
 
-For better experience, we recommend that you **pin this extension**. Left click **extensions button** in the right side of the Google Chrome search bar, find this extension, then left click **pin button**.
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/)
+
+Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/).
+
+### Option 2: Install it from source:
+
+* [download](https://github.com/seudev/chrome-video-speed-controller/archive/master.zip) this repository
+* extract the zip file to a folder
+* open Google Chrome and go to **chrome://extensions**
+* enable the **Developer mode**
+* click **Load unpacked extension**
+* select the extension folder
+
+**Note**: For better experience, we recommend that you **pin this extension**. Left click **extensions button** in the right side of the Google Chrome search bar, find this extension, then left click **pin button**.
 
 ## Licensing
 

@@ -2,39 +2,62 @@
 
 A simple and customizable Google Chrome Extension for control the video speed!
 
-## Screenshot
+## Screenshots
 
-![Screenshot of the Seudev's Video Speed Controller](https://user-images.githubusercontent.com/8549602/98446095-1881ba80-20fa-11eb-8f81-82e24f892d6b.png)
+|                                                                                                                                             |                                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![seudev-vsc-youtube-1](https://user-images.githubusercontent.com/8549602/101269988-32430b80-3753-11eb-98ac-db6096a4bc55.png) **YouTube**   | ![seudev-vsc-youtube-2](https://user-images.githubusercontent.com/8549602/101269989-353dfc00-3753-11eb-99eb-490550c6b996.png) **YouTube**   |
+| ![seudev-vsc-vimeo-1](https://user-images.githubusercontent.com/8549602/101269991-3a02b000-3753-11eb-8098-b984fab971ee.png)  **Vimeo**      | ![seudev-vsc-vimeo-2](https://user-images.githubusercontent.com/8549602/101269993-3c650a00-3753-11eb-9df7-294b054de466.png) **Vimeo**       |
+| ![seudev-vsc-facebook-1](https://user-images.githubusercontent.com/8549602/101269995-425aeb00-3753-11eb-84f6-dc655c081b69.png) **Facebook** | ![seudev-vsc-facebook-2](https://user-images.githubusercontent.com/8549602/101270081-33c10380-3754-11eb-9a18-a23d46ae43e5.png) **Facebook** |
 
 ## Features
 
 * Compatible with any HTML5 video (e.g. YouTube, Facebook and Vimeo)
-* Buttons to increase and decrease the speed
-* Predefined speed buttons
-* Customizable predefined buttons
-* Configurable speed by specific value
-* Configurable speed step
-* Reset settings buttons
-* Settings synchronized
+* Works in pages with multiple videos
+* Works in dynamic pages
+* Speed configurable by slider or mouse scroll
+* Reset speed button
 
 ## Installation
 
-### Option 1: Not available yet
+### Option 1: Chrome Web Store
 
-[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/)
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/seudevs-video-speed-contr/cjnjefcbjefdlbfefphengchppnhibpk)
 
-Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/).
+Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/seudevs-video-speed-contr/cjnjefcbjefdlbfefphengchppnhibpk).
 
 ### Option 2: Install it from source:
 
-* [download](https://github.com/seudev/chrome-video-speed-controller/archive/master.zip) this repository
-* extract the zip file to a folder
-* open Google Chrome and go to **chrome://extensions**
-* enable the **Developer mode**
-* click **Load unpacked extension**
-* select the extension folder
+* [Download](https://github.com/seudev/chrome-video-speed-controller/archive/master.zip) this repository
+* Extract the zip file to a folder
+* Open Google Chrome and go to **chrome://extensions**
+* Enable the **Developer mode**
+* Click **Load unpacked extension**
+* Select the extension folder
 
-**Note**: For better experience, we recommend that you **pin this extension**. Left click **extensions button** in the right side of the Google Chrome search bar, find this extension, then left click **pin button**.
+## Commands
+
+### Show the controller
+
+* Move the mouse over the video.
+
+### Reset speed to 1x
+
+* Click in the `R` button;
+* Move the mouse over the video and click in the mouse middle button.
+
+### Increment/decrement the speed
+
+* Move the **speed slider** *up* or *down* to *increment* or *decrement* the speed;
+* Move the mouse **over the speed slider** and scroll the **mouse wheel** *up* or *down* to *increment* or *decrement* the speed in *0.25x*;
+* Move the mouse **over the speed slider** and scroll the **mouse wheel** *up* or *down* pressing `Alt` key to *increment* or *decrement* the speed in *0.05x*;
+* Move the mouse **over the video** and scroll the **mouse wheel** *up* or *down* pressing `Shift` key to *increment* or *decrement* the speed in *0.25x*;
+* Move the mouse **over the video** and scroll the mouse wheel *up* or *down* pressing `Shift + Alt` keys to *increment* or *decrement* the speed in *0.05x*.
+
+### Go to Home page
+
+* Click in the **Seudev brand**;
+* Move the mouse over the **Seudev brand** and click in the **Seudev** link.
 
 ## Licensing
 

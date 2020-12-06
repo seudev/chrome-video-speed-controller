@@ -1,0 +1,124 @@
+.seudev-vsc {
+    min-width: 45px;
+    font-size: 14px!important;
+    font-family: 'Roboto', sans-serif!important;
+    background-color: rgb(76 76 76 / 65%)!important;
+    z-index: 100!important;
+    box-sizing: content-box!important;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.seudev-vsc:hover,
+.seudev-vsc.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.seudev-vsc  > *:not(:first-child) {
+    margin-top: 8px;
+}
+
+.seudev-vsc > .rate-display {
+    font-weight: 900;
+}
+
+.seudev-vsc > input {
+    outline: none!important;
+    width: 10px!important;
+    height: 100px!important;
+    -webkit-appearance: slider-vertical!important;
+}
+
+.seudev-vsc > .reset-rate {
+    outline: none!important;
+    color: #000!important;
+    padding: 1px 6px!important;
+    box-sizing: border-box!important;
+    border: none!important;
+}
+
+.seudev-vsc > input:hover,
+.seudev-vsc > .reset-rate:hover {
+    cursor: pointer!important;
+}
+
+.seudev-vsc > input:focus,
+.seudev-vsc > .reset-rate:focus {
+    outline: none!important;
+}
+
+.seudev-vsc .seudev {
+    width: 32px;
+}
+
+.seudev-vsc .seudev:hover {
+    cursor: pointer!important;
+}
+
+.seudev-vsc > .tooltip-wrapper {
+    position: relative;
+}
+
+.seudev-vsc .tooltip:hover,
+.seudev-vsc > .tooltip-wrapper:hover > .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.seudev-vsc .tooltip {
+    z-index: 1;
+    position: absolute;
+    transition: opacity 0.8s ease-out;
+    visibility: hidden;
+    opacity: 0;
+    bottom: 3px;
+    left: 100%;
+    padding-left: 25px;
+}
+
+.seudev-vsc .tooltip .heart {
+    color: #ff0000;
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.seudev-vsc .tooltip p {
+    position: relative!important;
+    white-space: nowrap!important;
+    margin: 0!important;
+    padding: 8px 12px!important;
+    border-radius: 3px!important;
+    background-color: rgba(76, 76, 76, 0.65)!important;
+}
+
+.seudev-vsc .tooltip p::after {
+    content: ""!important;
+    position: absolute!important;
+    top: 50%!important;
+    right: 100%!important;
+    margin-top: -8px!important;
+    border-width: 8px!important;
+    border-style: solid!important;
+    border-color: transparent rgba(76, 76, 76, 0.65) transparent transparent!important;
+}
+
+.seudev-vsc .tooltip-wrapper a {
+    font-weight: 900!important;
+    color: #6a66a7!important;
+}
+
+.seudev-vsc .tooltip-wrapper a:hover {
+    text-decoration: none!important;
+    cursor: pointer!important;
+}

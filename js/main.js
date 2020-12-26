@@ -14,6 +14,12 @@ const findBestContainerParent = video => {
     } else if (location.host.includes("vimeo")) {
         addEventListeners = true;
         node = video.closest(".js-player") || video.parentNode;
+    } else if (location.host.includes("netflix")) {
+        addEventListeners = true;
+        node = video.closest(".nf-player-container") || video.parentNode;
+    } else if (location.host.includes("whatsapp")) {
+        addEventListeners = true;
+        node = node.parentNode;
     }
     return { node, addEventListeners };
 };

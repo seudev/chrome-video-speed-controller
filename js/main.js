@@ -47,7 +47,7 @@ const createVsc = video => {
     containerParent.node.prepend(vscContainer);
 
     const rateDisplay = document.createElement("span");
-    rateDisplay.className = "rate-display";
+    rateDisplay.className = "seudev-vsc-rate-display";
     vscContainer.appendChild(rateDisplay);
 
     const rateInput = document.createElement("input");
@@ -59,13 +59,13 @@ const createVsc = video => {
     vscContainer.appendChild(rateInput);
 
     const resetRateButton = document.createElement("button");
-    resetRateButton.className = "reset-rate";
+    resetRateButton.className = "seudev-vsc-reset-rate";
     resetRateButton.type = "buttton";
     resetRateButton.textContent = "R";
     vscContainer.appendChild(resetRateButton);
 
     const tooltipWrapper = document.createElement("div");
-    tooltipWrapper.className = "tooltip-wrapper";
+    tooltipWrapper.className = "seudev-vsc-tooltip-wrapper";
     vscContainer.appendChild(tooltipWrapper);
 
     const homePageLink = document.createElement("a");
@@ -75,17 +75,17 @@ const createVsc = video => {
     tooltipWrapper.appendChild(homePageLink);
 
     const tooltip = document.createElement("div");
-    tooltip.className = "tooltip";
+    tooltip.className = "seudev-vsc-tooltip";
     tooltip.innerHTML = '<p>Made with <span class="heart">&#10084;</span> by <a target="_blank" href="https://github.com/seudev/chrome-video-speed-controller">Seudev</a>!</p>';
     tooltipWrapper.appendChild(tooltip);
 
     const hideController = (timeout = 2000) => {
         clearTimeout(timeouts[ref]);
-        timeouts[ref] = setTimeout(() => vscContainer.classList.remove("active"), timeout);
+        timeouts[ref] = setTimeout(() => vscContainer.classList.remove("seudev-vsc-active"), timeout);
     }
 
     const showController = () => {
-        vscContainer.classList.add("active");
+        vscContainer.classList.add("seudev-vsc-active");
         hideController();
     };
 

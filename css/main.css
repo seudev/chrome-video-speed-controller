@@ -18,6 +18,10 @@
     visibility: hidden!important;
 }
 
+.seudev-vsc.seudev-vsc-sm-container {
+    top: 25px!important;
+}
+
 .seudev-vsc:hover,
 .seudev-vsc.seudev-vsc-active {
     opacity: 1!important;

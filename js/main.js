@@ -38,6 +38,25 @@ const calculateMultiplier = e => {
     return e.wheelDelta > 0 ? multiplier : (multiplier * -1);
 };
 
+const onResize = (vscContainer, video) => {
+    const resizeObserver = new ResizeObserver(entries => {
+        entries.forEach(e => {
+            const parentHeigth = e.target.getBoundingClientRect().height;
+            const videoHeigth = video.getBoundingClientRect().height;
+            const heigth = Math.max(parentHeigth, videoHeigth);
+
+            if (heigth <= 600) {
+                vscContainer.classList.add("seudev-vsc-sm-container");
+            } else {
+                vscContainer.classList.remove("seudev-vsc-sm-container");
+            }
+        });
+    });
+
+    resizeObserver.observe(vscContainer.parentNode);
+    return resizeObserver;
+};
+
 const createVsc = video => {
     executeCleanup(video);
 
@@ -51,6 +70,8 @@ const createVsc = video => {
     vscContainer.id = id;
     vscContainer.className = "seudev-vsc";
     containerParent.node.prepend(vscContainer);
+
+    const resizeObserver = onResize(vscContainer, video);
 
     const rateDisplay = document.createElement("span");
     rateDisplay.className = "seudev-vsc-rate-display";
@@ -220,6 +241,8 @@ const createVsc = video => {
     video.addEventListener("mouseup", handleMouseUp);
 
     const cleanup = () => {
+        resizeObserver.disconnect();
+
         if (containerParent.addEventListeners) {
             vscContainer.parentNode.removeEventListener("mousemove", showController);
             vscContainer.parentNode.removeEventListener("mouseout", onMouseOut);

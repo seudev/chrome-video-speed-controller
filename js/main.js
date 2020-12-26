@@ -100,11 +100,27 @@ const createVsc = video => {
         video.playbackRate = 1;
     };
 
-    const handleMouseButtonClick = e => {
+    const handleMouseDown = e => {
         const middleButton = 1;
 
         if (e.button === middleButton) {
-            resetRate();
+            if (e.shiftKey) {
+                showController();
+                rateInput.setAttribute("previous-value", rateInput.value);
+                video.playbackRate = parseFloat(rateInput.max);
+            } else {
+                resetRate();
+            }
+        }
+    };
+
+    const handleMouseUp = e => {
+        const middleButton = 1;
+        if ((e.button === middleButton) && rateInput.hasAttribute("previous-value")) {
+            showController();
+            const previousValue = parseFloat(rateInput.getAttribute("previous-value"));
+            rateInput.removeAttribute("previous-value");
+            video.playbackRate = previousValue;
         }
     };
 
@@ -146,7 +162,7 @@ const createVsc = video => {
         e.stopPropagation();
     };
 
-    const onMouseout = () => {
+    const onMouseOut = () => {
         hideController(0);
     };
 
@@ -177,14 +193,16 @@ const createVsc = video => {
 
     if (containerParent.addEventListeners) {
         vscContainer.parentNode.addEventListener("mousemove", showController);
-        vscContainer.parentNode.addEventListener("mouseout", onMouseout);
+        vscContainer.parentNode.addEventListener("mouseout", onMouseOut);
         vscContainer.parentNode.addEventListener("mousewheel", onVideoMouseWheel);
-        vscContainer.parentNode.addEventListener("mousedown", handleMouseButtonClick);
+        vscContainer.parentNode.addEventListener("mousedown", handleMouseDown);
+        vscContainer.parentNode.addEventListener("mouseup", handleMouseUp);
     }
 
     vscContainer.addEventListener("click", onContainerClick);
     vscContainer.addEventListener("mousewheel", onContainerMouseWheel);
-    vscContainer.addEventListener("mousedown", handleMouseButtonClick);
+    vscContainer.addEventListener("mousedown", handleMouseDown);
+    vscContainer.addEventListener("mouseup", handleMouseUp);
 
     rateInput.addEventListener("change", onRateInputChange);
     rateInput.addEventListener("input", onRateInputChange);
@@ -195,25 +213,28 @@ const createVsc = video => {
         .forEach(a => a.addEventListener("click", e => e.stopPropagation()));
 
     video.addEventListener("mousemove", showController);
-    video.addEventListener("mouseout", onMouseout);
+    video.addEventListener("mouseout", onMouseOut);
     video.addEventListener("ratechange", onRateChange);
     video.addEventListener("mousewheel", onVideoMouseWheel);
-    video.addEventListener("mousedown", handleMouseButtonClick);
+    video.addEventListener("mousedown", handleMouseDown);
+    video.addEventListener("mouseup", handleMouseUp);
 
     const cleanup = () => {
         if (containerParent.addEventListeners) {
             vscContainer.parentNode.removeEventListener("mousemove", showController);
-            vscContainer.parentNode.removeEventListener("mouseout", onMouseout);
+            vscContainer.parentNode.removeEventListener("mouseout", onMouseOut);
             vscContainer.parentNode.removeEventListener("mousewheel", onVideoMouseWheel);
-            vscContainer.parentNode.removeEventListener("mousedown", handleMouseButtonClick);
+            vscContainer.parentNode.removeEventListener("mousedown", handleMouseDown);
+            vscContainer.parentNode.removeEventListener("mouseup", handleMouseUp);
         }
 
         vscContainer.remove();
         video.removeEventListener("mousemove", showController);
-        video.removeEventListener("mouseout", onMouseout);
+        video.removeEventListener("mouseout", onMouseOut);
         video.removeEventListener("ratechange", onRateChange);
         video.removeEventListener("mousewheel", onVideoMouseWheel);
-        video.removeEventListener("mousedown", handleMouseButtonClick);
+        video.removeEventListener("mousedown", handleMouseDown);
+        video.removeEventListener("mouseup", handleMouseUp);
     };
 
     cleanups[ref] = cleanup;

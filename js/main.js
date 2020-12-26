@@ -20,6 +20,9 @@ const findBestContainerParent = video => {
     } else if (location.host.includes("whatsapp")) {
         addEventListeners = true;
         node = node.parentNode;
+    } else if (location.host.includes("twitch")) {
+        addEventListeners = true;
+        node = video.closest(".tw-absolute") || video.parentNode;
     }
     return { node, addEventListeners };
 };
@@ -121,6 +124,18 @@ const createVsc = video => {
         video.playbackRate = 1;
     };
 
+    const setForcedPlaybackRate = (rate, retry = 3) => {
+        video.playbackRate = rate;
+
+        if (retry > 0) {
+            setTimeout(() => {
+                if (video.playbackRate != rate) {
+                    setForcedPlaybackRate(rate, (retry - 1));
+                }
+            }, 50);
+        }
+    };
+
     const handleMouseDown = e => {
         const middleButton = 1;
 
@@ -128,7 +143,8 @@ const createVsc = video => {
             if (e.shiftKey) {
                 showController();
                 rateInput.setAttribute("previous-value", rateInput.value);
-                video.playbackRate = parseFloat(rateInput.max);
+                const max = parseFloat(rateInput.max);
+                setForcedPlaybackRate(max);
             } else {
                 resetRate();
             }
@@ -141,7 +157,7 @@ const createVsc = video => {
             showController();
             const previousValue = parseFloat(rateInput.getAttribute("previous-value"));
             rateInput.removeAttribute("previous-value");
-            video.playbackRate = previousValue;
+            setForcedPlaybackRate(previousValue);
         }
     };
 
@@ -175,7 +191,7 @@ const createVsc = video => {
 
         const value = parseFloat(rateInput.value);
         setRateDisplay(value);
-        video.playbackRate = value;
+        setForcedPlaybackRate(value);
     };
 
     const onContainerClick = e => {

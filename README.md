@@ -4,11 +4,11 @@ A simple and customizable Google Chrome Extension for control the video speed!
 
 ## Screenshots
 
-|                                                                                                                                             |                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![seudev-vsc-youtube-1](https://user-images.githubusercontent.com/8549602/101269988-32430b80-3753-11eb-98ac-db6096a4bc55.png) **YouTube**   | ![seudev-vsc-youtube-2](https://user-images.githubusercontent.com/8549602/101269989-353dfc00-3753-11eb-99eb-490550c6b996.png) **YouTube**   |
-| ![seudev-vsc-vimeo-1](https://user-images.githubusercontent.com/8549602/101269991-3a02b000-3753-11eb-8098-b984fab971ee.png)  **Vimeo**      | ![seudev-vsc-vimeo-2](https://user-images.githubusercontent.com/8549602/101269993-3c650a00-3753-11eb-9df7-294b054de466.png) **Vimeo**       |
-| ![seudev-vsc-facebook-1](https://user-images.githubusercontent.com/8549602/101269995-425aeb00-3753-11eb-84f6-dc655c081b69.png) **Facebook** | ![seudev-vsc-facebook-2](https://user-images.githubusercontent.com/8549602/101270081-33c10380-3754-11eb-9a18-a23d46ae43e5.png) **Facebook** |
+|                                                                                                                                           |                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| ![seudev-vsc-youtube](https://user-images.githubusercontent.com/8549602/101269988-32430b80-3753-11eb-98ac-db6096a4bc55.png) **YouTube**   | ![seudev-vsc-vimeo](https://user-images.githubusercontent.com/8549602/101269991-3a02b000-3753-11eb-8098-b984fab971ee.png)  **Vimeo**      |
+| ![seudev-vsc-facebook](https://user-images.githubusercontent.com/8549602/101269995-425aeb00-3753-11eb-84f6-dc655c081b69.png) **Facebook** | ![seudev-vsc-twitch](https://user-images.githubusercontent.com/8549602/103160860-748ec400-47b8-11eb-86d8-eb6918524cb8.png) **Twitch**     |
+| ![seudev-vsc-udemy](https://user-images.githubusercontent.com/8549602/103160853-62ad2100-47b8-11eb-818d-4de1ca006bc9.png) **Udemy**       | ![seudev-vsc-linkedin](https://user-images.githubusercontent.com/8549602/103160859-6f317980-47b8-11eb-8a8b-8b5de720e140.png) **LinkedIn** |
 
 ## Features
 
@@ -22,7 +22,7 @@ A simple and customizable Google Chrome Extension for control the video speed!
 
 ### Option 1: Chrome Web Store
 
-[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_340x96.png)](https://chrome.google.com/webstore/detail/seudevs-video-speed-contr/cjnjefcbjefdlbfefphengchppnhibpk)
+[![Chrome Web Store](https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/mPGKYBIR2uCP0ApchDXE.png)](https://chrome.google.com/webstore/detail/seudevs-video-speed-contr/cjnjefcbjefdlbfefphengchppnhibpk)
 
 Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/seudevs-video-speed-contr/cjnjefcbjefdlbfefphengchppnhibpk).
 
@@ -44,7 +44,7 @@ Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/d
 ### Reset speed to 1x
 
 * Click in the `R` button;
-* Move the mouse over the video and click in the mouse middle button.
+* Move the mouse over the video and click with the mouse *middle button*.
 
 ### Increment/decrement the speed
 
@@ -54,10 +54,27 @@ Just install it from the [Chrome Web Store](https://chrome.google.com/webstore/d
 * Move the mouse **over the video** and scroll the **mouse wheel** *up* or *down* pressing `Shift` key to *increment* or *decrement* the speed in *0.25x*;
 * Move the mouse **over the video** and scroll the mouse wheel *up* or *down* pressing `Shift + Alt` keys to *increment* or *decrement* the speed in *0.05x*.
 
+### Set the max speed
+
+* Move the mouse over the video and press with the mouse *middle button* pressing `Shift` key.
+
+**Note**: The max speed will be maintained while the button is pressed. When the button is released the speed returns to the previous speed.
+
 ### Go to Home page
 
 * Click in the **Seudev brand**;
 * Move the mouse over the **Seudev brand** and click in the **Seudev** link.
+
+## Tested sites
+
+* YouTube
+* Vimeo
+* Facebook
+* Twitch
+* Udemy
+* LinkedIn
+* Netflix
+* Whatsapp Web
 
 ## Licensing
 

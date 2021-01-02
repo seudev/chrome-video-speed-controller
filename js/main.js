@@ -6,7 +6,10 @@ const findBestContainerParent = video => {
     let node = video.parentNode;
     let addEventListeners = false;
 
-    if (location.host.includes("facebook")) {
+    if (location.host.includes("youtube")) {
+        addEventListeners = true;
+        node = video.closest(".html5-video-player") || video.parentNode;
+    } else if (location.host.includes("facebook")) {
         addEventListeners = true;
         while (node.parentNode.classList.contains("k4urcfbm")) {
             node = node.parentNode;
